@@ -12,6 +12,8 @@ cd frontend && npm install && npm run dev     # http://localhost:5173
 ```
 Admin is seeded on first start: **admin@nexabank.com / Admin@123** (change it after login).
 
+The frontend uses `/api` by default; Vite proxies that path to the local backend. When deploying the frontend and backend separately, set `VITE_API_URL` in the frontend hosting environment to the backend URL ending in `/api` (for example, `https://your-backend.example.com/api`).
+
 ## Features
 - Register / login (JWT, bcrypt, rate-limited auth, helmet)
 - Unique account numbers, deposit, withdraw, transfer with recipient lookup and confirmation
